@@ -15,10 +15,10 @@ const About = () => {
   ];
 
   const team = [
-    { name: "Rajesh Sharma", initials: "RS" },
-    { name: "Priya Verma", initials: "PV" },
-    { name: "Arjun Mehta", initials: "AM" },
-    { name: "Neha Singh", initials: "NS" },
+    { name: "Rajesh Sharma", initials: "RS", role: "Founder & CEO" },
+    { name: "Priya Verma", initials: "PV", role: "Head of Consulting" },
+    { name: "Arjun Mehta", initials: "AM", role: "Oracle Solutions Architect" },
+    { name: "Neha Singh", initials: "NS", role: "Business Analyst" },
   ];
 
   return (
@@ -144,11 +144,12 @@ const About = () => {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {team.map((member) => (
-              <div key={member.name} className="flex flex-col items-center">
+              <div key={member.name} className="flex flex-col items-center bg-card rounded-lg p-6 shadow-sm border">
                 <div className="w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center mb-3">
                   <span className="text-primary font-bold text-lg">{member.initials}</span>
                 </div>
                 <p className="font-bold text-foreground">{member.name}</p>
+                <p className="text-muted-foreground text-sm mt-1">{member.role}</p>
               </div>
             ))}
           </div>
